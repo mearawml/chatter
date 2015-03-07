@@ -14,11 +14,7 @@
     [:h1 "Our Chat App"]]))
 
 (defroutes app-routes
-  (GET "/" [] (page/html5
-        [:head
-         [:title "chatter"]]
-        [:body
-         [:h1 "Our Chat App"]]))
+  (GET "/" [] (generate-message-view))
   (route/not-found "Not Found"))
 
 (def app
